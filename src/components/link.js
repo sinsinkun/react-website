@@ -6,7 +6,7 @@ class link extends Component {
         return (
 
             <div>
-                <h1>Link Page</h1>
+                <h3>Link Page</h3>
                 <p>Subtitle</p>
             </div>
 
