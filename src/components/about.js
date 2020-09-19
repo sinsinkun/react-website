@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import '../App.css';
 
-function About (props) {
+function About(props) {
 
-	useEffect(
-		() => {props.updatePage('about')}
+	useEffect(() => {
+		props.updatePage('about');
+		window.scrollTo(0,0);
 		// eslint-disable-next-line 
-	, [])
+	}, [])
 
 	return (
 		<div>

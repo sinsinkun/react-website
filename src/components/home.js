@@ -3,10 +3,11 @@ import '../App.css';
 
 function Home(props) {
 
-	useEffect(
-		() => {props.updatePage('home')}
+	useEffect(() => {
+		props.updatePage('home');
+		window.scrollTo(0,0);
 		// eslint-disable-next-line 
-	, [])
+	}, [])
 
 	return (
 		<div>

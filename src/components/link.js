@@ -3,10 +3,11 @@ import '../App.css';
 
 function Link(props) {
 
-	useEffect(
-		() => {props.updatePage('link')}
+	useEffect(() => {
+		props.updatePage('link');
+		window.scrollTo(0,0);
 		// eslint-disable-next-line 
-	, [])
+	}, [])
 
 	return (
 		<div>
