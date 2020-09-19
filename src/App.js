@@ -13,7 +13,7 @@ class App extends Component {
     currentPage: 'home'
   }
 
-  updatePage(newPage) {
+  updatePage = (newPage) => {
     this.setState({currentPage:newPage});
   }
 
@@ -21,8 +21,8 @@ class App extends Component {
     return (
       <Router>
         <div className="appBody">
-          <Header currentPage={this.currentPage}/>
-          <Navbar currentPage={this.currentPage}/>
+          <Header currentPage={this.state.currentPage}/>
+          <Navbar currentPage={this.state.currentPage}/>
           <Switch>
             <Route exact path='/'><Home updatePage={this.updatePage}/></Route>
             <Route path='/link'><Link updatePage={this.updatePage}/></Route>

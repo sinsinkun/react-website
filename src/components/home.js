@@ -1,18 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../App.css';
 
-class home extends Component {
+function home(props) {
 
-  
-
-	render() {
-		return (
-			<div>
-				<h3>Home Page</h3>
-				<p>Subtitle</p>
-			</div>
-		);
-	}
+	return (
+		<div>
+			{/* props.updatePage('home') */}
+			<h3>Home Page</h3>
+			<p>Subtitle</p>
+		</div>
+	);
 
 }
 

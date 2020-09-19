@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 
-class navBar extends Component {
-	render() {
-		return (
-			<div className = 'navBar'>
-				<Link to='/'><li>Home</li></Link>
-				<Link to='/link'><li>Link</li></Link>
-				<Link to='/about'><li>About</li></Link>
-			</div>
-		);
-	}
+function navBar(props) {
+	return (
+		<div className = 'navBar'>
+			{props.currentPage === 'home' ? <Link to='/'>Home</Link> : <div className = 'clickedNav'>Here</div>}
+			<Link to='/link'>Link</Link>
+			<Link to='/about'>About</Link>
+		</div>
+	);
 }
 
 export default navBar;
