@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 
-function home(props) {
+function Home(props) {
+
+	useEffect(
+		() => {props.updatePage('home')}
+		// eslint-disable-next-line 
+	, [])
 
 	return (
 		<div>
-			{/* props.updatePage('home') */}
 			<h3>Home Page</h3>
 			<p>Subtitle</p>
 		</div>
@@ -13,4 +17,4 @@ function home(props) {
 
 }
 
-export default home;
+export default Home;

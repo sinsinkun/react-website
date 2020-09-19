@@ -1,15 +1,19 @@
-import React, {Component} from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 
-class about extends Component {
-	render() {
-		return (
-			<div>
-				<h3>About page</h3>
-				<p>Subtitle</p>
-			</div>
-		);
-	}
+function About (props) {
+
+	useEffect(
+		() => {props.updatePage('about')}
+		// eslint-disable-next-line 
+	, [])
+
+	return (
+		<div>
+			<h3>About page</h3>
+			<p>Subtitle</p>
+		</div>
+	);
 }
 
-export default about;
+export default About;
