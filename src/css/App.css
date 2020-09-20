@@ -1,6 +1,6 @@
 @font-face {
   font-family: Merriweather;
-  src: url('./font/Merriweather-Regular.ttf');
+  src: url('../font/Merriweather-Regular.ttf');
 } 
 
 * {
@@ -10,6 +10,7 @@
 
 body {
   margin: 0px;
+  background-color: #ddd;
 }
 
 .header {
