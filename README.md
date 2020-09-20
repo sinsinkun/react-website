@@ -3,3 +3,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Testing Ground
 
 Simple portfolio website
+
+Deployed at: http://sinsinkun.github.io/react-website
