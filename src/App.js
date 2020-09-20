@@ -20,7 +20,7 @@ class App extends Component {
 
   render () { 
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="appBody">
           <Header currentPage={this.state.currentPage}/>
           <Navbar currentPage={this.state.currentPage}/>
