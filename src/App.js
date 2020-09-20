@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './css/App.css';
 import Header from './components/Header';
 import Navbar from './components/NavBar';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Link from './components/Link';
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path='/link'><Link updatePage={this.updatePage}/></Route>
             <Route path='/about'><About updatePage={this.updatePage}/></Route>
           </Switch>
+          <Footer />
         </div>
       </Router>
     )
