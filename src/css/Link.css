@@ -1,0 +1,6 @@
+.link {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#dff,#cdc);
+  min-height: 80vh;
+}

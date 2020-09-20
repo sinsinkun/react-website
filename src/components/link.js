@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../css/App.css';
+import '../css/Link.css';
 
 function Link(props) {
 
@@ -10,8 +10,8 @@ function Link(props) {
 	}, [])
 
 	return (
-		<div>
-			<h3>Link Page</h3>
+		<div className = 'link'>
+			<div>Top</div>
 			<p>Subtitle</p>
 		</div>
 	);

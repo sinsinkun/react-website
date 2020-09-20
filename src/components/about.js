@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../css/App.css';
+import '../css/About.css';
 
 function About(props) {
 
@@ -10,7 +10,8 @@ function About(props) {
 	}, [])
 
 	return (
-		<div>
+		<div className = 'about'>
+			<div>Top</div>
 			<h3>About page</h3>
 			<p>Subtitle</p>
 		</div>

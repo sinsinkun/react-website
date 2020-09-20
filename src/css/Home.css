@@ -1,0 +1,84 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#dff,#cdc);
+  min-height: 80vh;
+  align-items: center;
+}
+
+.topImage {
+  display: flex;
+  background-image: url('../img/space2.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  text-shadow: 0 0 4px black, 0 0 10px darkred;
+}
+
+.squeeze1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+.squeeze1 p {
+  max-width: 35vw;
+  padding: 0 5px;
+}
+.squeeze1 img {
+  max-width: 50vw;
+  justify-self: center;
+}
+
+.squeeze2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+.squeeze2 p {
+  order: 2;
+  max-width: 35vw;
+  padding: 0 5px;
+}
+.squeeze2 img {
+  order: 1;
+  max-width: 50vw;
+  justify-self: center;
+}
+
+.botLorem {
+  padding: 10px;
+  max-width: 75vw;
+  min-height: 20vh;
+}
+
+@media (max-width: 720px) {
+  .squeeze1 {
+    grid-template-columns: 1fr;
+  }
+  .squeeze1 p {
+    max-width: 100%;
+  }
+  .squeeze1 img {
+    max-width: 100%;
+  }
+  .squeeze2 {
+    grid-template-columns: 1fr;
+  }
+  .squeeze2 p {
+    order: 1;
+    max-width: 100%;
+  }
+  .squeeze2 img {
+    order: 2;
+    max-width: 100%;
+  }
+  .botLorem {
+    max-width: 100%;
+  }
+}

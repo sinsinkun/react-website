@@ -10,7 +10,6 @@
 
 body {
   margin: 0px;
-  background-color: #ddd;
 }
 
 .header {
@@ -58,8 +57,4 @@ body {
   text-align: center;
   color: white;
   width: 34vw;
-}
-
-@media (max-width: 720px) {
-
 }
