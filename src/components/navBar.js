@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 
-function navBar(props) {
+function NavBar(props) {
 
 	return (
 		<div className = 'navBar'>
@@ -19,4 +19,4 @@ function navBar(props) {
 	);
 }
 
-export default navBar;
+export default NavBar;

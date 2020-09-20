@@ -1,5 +1,11 @@
+@font-face {
+  font-family: Merriweather;
+  src: url('./font/Merriweather-Regular.ttf');
+} 
+
 * {
   box-sizing: border-box;
+  font-family: 'Merriweather';
 }
 
 body {
@@ -32,16 +38,11 @@ body {
   background-color: #333;
 }
 
-.navbar a::before {
-  content: '';
-  width: 50vw;
-}
-
 .navBar a {
   padding: 8px 10px;
   text-align: center;
   text-decoration: none;
-  width: 40vw;
+  width: 34vw;
   color: white;
   list-style: none;
 }
@@ -55,11 +56,9 @@ body {
   padding: 8px 10px;
   text-align: center;
   color: white;
-  width: 40vw;
+  width: 34vw;
 }
 
 @media (max-width: 720px) {
-  .navBar a {
-    width: 30vw;
-  }
+
 }

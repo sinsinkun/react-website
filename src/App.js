@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
-import Header from './components/header';
-import Navbar from './components/navBar';
-import Home from './components/home';
-import About from './components/about';
-import Link from './components/link';
+import Header from './components/Header';
+import Navbar from './components/NavBar';
+import Home from './components/Home';
+import About from './components/About';
+import Link from './components/Link';
 
 class App extends Component {
 

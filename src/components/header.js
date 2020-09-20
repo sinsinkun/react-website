@@ -1,13 +1,13 @@
 import React from 'react';
 import '../App.css';
 
-function header(props) {
+function Header(props) {
 
 	if (props.currentPage === 'home') {
 		return (
 			<div className = 'header' style={{backgroundColor:'#1abc9c'}}>
-				<p>Current Page: {props.currentPage}</p>
-				<h1>Home Header</h1>
+				<p>Information {'&'} Filler Text</p>
+				<h1>Home Page</h1>
 			</div>
 		);
 	}
@@ -38,4 +38,4 @@ function header(props) {
 	}
 }
 
-export default header;
+export default Header;
