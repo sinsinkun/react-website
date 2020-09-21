@@ -26,7 +26,7 @@
 
 .topImage {
   display: flex;
-  background-image: url('../img/space2.jpg');
+  background-image: url('../img/space1.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,6 +54,7 @@
 
 .squeeze2 .topImage {
   order: 1;
+  background-image: url('../img/space2.jpg');
 }
 
 .botLorem {
