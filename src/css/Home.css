@@ -1,9 +1,27 @@
 .home {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#dff,#cdc);
+  background-color: #dff;
   min-height: 80vh;
   align-items: center;
+}
+
+.home h3 {
+  font-size: 30pt;
+  margin: 10vh 0;
+}
+
+.squeeze1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+.squeeze1 p {
+  max-width: 50vw;
+  padding: 0 15px;
 }
 
 .topImage {
@@ -13,7 +31,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh;
+  height: 480px;
   width: 100%;
   justify-content: center;
   align-items: flex-end;
@@ -21,40 +39,28 @@
   text-shadow: 0 0 4px black, 0 0 10px darkred;
 }
 
-.squeeze1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 5px;
-}
-.squeeze1 p {
-  max-width: 35vw;
-  padding: 0 5px;
-}
-.squeeze1 img {
-  max-width: 50vw;
-  justify-self: center;
-}
-
 .squeeze2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 5px;
+  margin-bottom: 40px;
+  max-width: 900px;
 }
 .squeeze2 p {
   order: 2;
-  max-width: 35vw;
-  padding: 0 5px;
-}
-.squeeze2 img {
-  order: 1;
   max-width: 50vw;
-  justify-self: center;
+  padding: 0 15px;
+}
+
+.squeeze2 .topImage {
+  order: 1;
 }
 
 .botLorem {
   padding: 10px;
-  max-width: 75vw;
+  max-width: 900px;
   min-height: 20vh;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 720px) {
@@ -64,9 +70,6 @@
   .squeeze1 p {
     max-width: 100%;
   }
-  .squeeze1 img {
-    max-width: 100%;
-  }
   .squeeze2 {
     grid-template-columns: 1fr;
   }
@@ -74,9 +77,8 @@
     order: 1;
     max-width: 100%;
   }
-  .squeeze2 img {
+  .squeeze2 .topImage {
     order: 2;
-    max-width: 100%;
   }
   .botLorem {
     max-width: 100%;

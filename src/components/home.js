@@ -11,9 +11,7 @@ function Home(props) {
 
 	return (
 		<div className = 'home'>
-			<div className = 'topImage'>
-				<h3>Sub heading</h3>
-			</div>
+			<h3>Sub heading</h3>
 			<div className = 'squeeze1'>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -22,9 +20,8 @@ function Home(props) {
 					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa qui officia deserunt mollit anim id est laborum.</p>
-				<img src='https://via.placeholder.com/400' alt='Stand-in'></img>
+				<div className = 'topImage'>{' '}</div>
 			</div>
-			<br />
 			<div className = 'squeeze2'>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -33,7 +30,7 @@ function Home(props) {
 					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa qui officia deserunt mollit anim id est laborum.</p>
-				<img src='https://via.placeholder.com/400' alt='Stand-in'></img>
+				<div className = 'topImage'>{' '}</div>
 			</div>
 			<div className = 'botLorem'>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit,

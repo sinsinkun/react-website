@@ -22,8 +22,8 @@ class App extends Component {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div className="appBody">
-          <Header currentPage={this.state.currentPage}/>
           <Navbar currentPage={this.state.currentPage}/>
+          <Header currentPage={this.state.currentPage}/>
           <Switch>
             <Route exact path='/'><Home updatePage={this.updatePage}/></Route>
             <Route path='/link'><Link updatePage={this.updatePage}/></Route>
