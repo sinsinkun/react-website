@@ -34,9 +34,15 @@ body {
 }
 
 .navLogoArea {
+  display: flex;
   align-self: center;
   color: white;
   padding: 0 10px;
+}
+
+.navLogo {
+  margin-top: 8px;
+  margin-right: 5px;
 }
 
 .navLinks {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect }from 'react';
 import {Link} from 'react-router-dom';
 import '../css/App.css';
+import logo from '../img/personal_logo_inverted.png';
 
 function NavBar(props) {
 
@@ -37,7 +38,8 @@ function NavBar(props) {
 		<div className = {navVis}>
 			<div className = 'navBar'>
 				<div className = 'navLogoArea'>
-					React-Test
+					<img className = 'navLogo' src={logo} alt='logo' height={'35px'} width={'35px'}/>
+					<p>React-Test</p>
 				</div>
 				<div className = 'navLinks'>
 					{props.currentPage === 'home' ? 
