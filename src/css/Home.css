@@ -64,7 +64,7 @@
   padding: 10px;
   max-width: 900px;
   min-height: 20vh;
-  line-height: 25px;
+  line-height: 30px;
   margin-bottom: 40px;
 }
 
@@ -89,5 +89,6 @@
   }
   .botLorem {
     max-width: 100%;
+    line-height: 20px;
   }
 }

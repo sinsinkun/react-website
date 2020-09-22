@@ -13,6 +13,17 @@ body {
   margin: 0px;
 }
 
+/*-- NAVBAR CSS --*/
+.navVis {
+  z-index: 1;
+  transform: none;
+}
+
+.navNotVis {
+  z-index: 1;
+  transform: translate3d(0, -100%, 0);
+}
+
 .navBar {
   display: flex;
   height: 40px;
@@ -54,13 +65,15 @@ body {
   width: 15vw;
 }
 
+/*-- HEADER CSS --*/
 .header {
   display: flex;
   flex-direction: column;
   height: 60vw;
-  max-height: 500px;
+  min-height: 400px;
+  max-height: 600px;
   background-color: #1abc9c;
-  padding: 2vw 20px;
+  padding: 7vw 5vw;
   color: white;
 }
 
@@ -77,6 +90,31 @@ body {
   text-shadow: 0 0 8px black;
 }
 
+@media (max-width: 720px) {
+  .header {
+    padding: 60px 20px;
+  }
+  .header h1 {
+    font-size: 40pt;
+  }
+  .header p {
+    font-size: 12pt;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    padding: 70px 5vw;
+  }
+  .header h1 {
+    font-size: 60pt;
+  }
+  .header p {
+    font-size: 14pt;
+  }
+}
+
+/*-- FOOTER CSS --*/
 .footer {
   display: grid;
   grid-template-columns: 15% 70% 15%;
@@ -105,24 +143,7 @@ body {
 }
 
 @media (max-width: 720px) {
-  .header h1 {
-    font-size: 40pt;
-  }
-
-  .header p {
-    font-size: 12pt;
-  }
-
   .footer {
     grid-template-columns: 25% 50% 25%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .header h1 {
-    font-size: 60pt;
-  }
-  .header p {
-    font-size: 14pt;
   }
 }

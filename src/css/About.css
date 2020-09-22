@@ -1,6 +1,6 @@
 .about {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#dff,#cdc);
+  background-color: #dff;
   min-height: 80vh;
 }
