@@ -8,6 +8,8 @@ function NavBar(props) {
 	const [lastY, setLastY] = useState(0);
 	const [navVis, setNavVis] = useState('navVis');
 	const [cooldown, setCooldown] = useState(false);
+	const [inSideMenu, setInSideMenu] = useState(false);
+	const [openMenu, setOpenMenu] = useState(false);
 
 	useEffect(() => { 
 		window.addEventListener('scroll', () => {
@@ -37,6 +39,20 @@ function NavBar(props) {
 			}
 	}, [cooldown])
 
+	useEffect(() => {
+		window.addEventListener('resize', () => {
+			const width = window.innerWidth;
+			if (width <= 780) setInSideMenu(true);
+			else setInSideMenu(false);
+			if (width >= 780 && openMenu) setOpenMenu(false);
+		})
+	})
+
+	const handleClickMenu = () => {
+		if (openMenu) setOpenMenu(false);
+		else setOpenMenu(true);
+	}
+
 	return (
 		<div className = {navVis}>
 			<div className = 'navBar'>
@@ -44,20 +60,24 @@ function NavBar(props) {
 					<img className = 'navLogo' src={logo} alt='logo' height={'35px'} width={'35px'}/>
 					<p>React-Test</p>
 				</div>
-				<div className = 'navLinks'>
+				<div className = {'burgerBtn' + (inSideMenu ? '' : '-hidden')} onClick={handleClickMenu}>
+					<div className = 'line1'>{' '}</div>
+					<div className = 'line1'>{' '}</div>
+					<div className = 'line1'>{' '}</div>
+				</div>
+				<div className = {'navLinks' + (inSideMenu ? '-in-side-menu' : '') + (openMenu ? '-open' : '')}>
 					{props.currentPage === 'home' ? 
 						<div className = 'clickedNav' style={{backgroundColor:'#1abc9c'}}>Home</div> :
-						<Link to='/'>Home</Link>}
+						<Link to='/' onClick={handleClickMenu}>Home</Link>}
 					{props.currentPage === 'link' ? 
 						<div className = 'clickedNav' style={{backgroundColor:'#dc6a9c'}}>Link</div> :
-						<Link to='/link'>Link</Link>}
+						<Link to='/link' onClick={handleClickMenu}>Link</Link>}
 					{props.currentPage === 'about' ? 
 						<div className = 'clickedNav' style={{backgroundColor:'#15b2c4'}}>About</div> :
-						<Link to='/about'>About</Link>}
+						<Link to='/about' onClick={handleClickMenu}>About</Link>}
 				</div>
 			</div>
 		</div>
-		
 	);
 }
 

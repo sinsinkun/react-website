@@ -51,9 +51,41 @@ body {
   margin-right: 5px;
 }
 
+.burgerBtn-hidden {
+  margin-left: auto;
+}
+
+.burgerBtn {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+}
+
+.burgerBtn:hover {
+  background-color: #666;
+  cursor: pointer;
+}
+
+.line1 {
+  background-color: white;
+  height: 2px;
+  width: 60%;
+  margin: 3px 0;
+}
+
 .navLinks {
   display: flex;
-  margin-left: auto;
+}
+
+.navLinks-in-side-menu {
+  display: none;
 }
 
 .navBar a {
@@ -75,6 +107,37 @@ body {
   text-align: center;
   color: white;
   width: 15vw;
+}
+
+.navLinks-in-side-menu-open {
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  transform: translate(0, 40px);
+  background-color: inherit;
+  position: fixed;
+  right: 0;
+}
+
+.navLinks-in-side-menu-open a {
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+  color: white;
+  list-style: none;
+}
+
+.navLinks-in-side-menu-open a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navLinks-in-side-menu-open .clickedNav {
+  padding: 8px 10px;
+  text-align: center;
+  color: white;
+  width: 150px;
 }
 
 /*-- HEADER CSS --*/
