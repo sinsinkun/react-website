@@ -17,12 +17,12 @@ function NavBar(props) {
 				setNavVis('navVis');
 			}
 			if (currentY > lastY && !cooldown) {
-				console.log('make nav invisible ' + lastY + ' to ' + currentY);
+				console.log('make nav invisible - ' + lastY + ' to ' + currentY);
 				setNavVis('navNotVis');
 				setCooldown(true);
 			}
 			else if (currentY < lastY && !cooldown) {
-				console.log('make nav visible again ' + lastY + ' to ' + currentY);
+				console.log('make nav visible again - ' + lastY + ' to ' + currentY);
 				setNavVis('navVis');
 				setCooldown(true);
 			}
@@ -31,7 +31,10 @@ function NavBar(props) {
 	})
 
 	useEffect(() => {
-		setTimeout(() => { setCooldown(false); }, 100);
+			const timeoutFunc = setTimeout(() => { setCooldown(false); }, 400);
+			return () => {
+				clearTimeout(timeoutFunc);
+			}
 	}, [cooldown])
 
 	return (

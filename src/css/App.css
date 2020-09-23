@@ -15,13 +15,19 @@ body {
 
 /*-- NAVBAR CSS --*/
 .navVis {
+  position: fixed;
+  width: 100%;
   z-index: 1;
   transform: none;
+  transition: all 0.2s;
 }
 
 .navNotVis {
+  position: fixed;
+  width: 100%;
   z-index: 1;
-  transform: translate3d(0, -100%, 0);
+  transform: translateY(-40px);
+  transition: all 0.2s;
 }
 
 .navBar {
