@@ -14,10 +14,14 @@ function About(props) {
 			<p>This site was built using react with no 3rd party libraries</p>
 			<div className = 'about-me'>
 				<div className = 'sidebar'>
-					<p>sidebar</p>
+					<div className = 'sideImg'>Image</div>
 				</div>
 				<div className = 'main'>
-					<p>main info</p>
+					<p>Creator: </p><p>JingChang Xiao</p>
+					<p>Github: </p>
+					<p><a href='https://github.com/sinsinkun/' target='_blank' rel='noopener noreferrer'>
+						https://github.com/sinsinkun/
+					</a></p>
 				</div>
 			</div>
 		</div>

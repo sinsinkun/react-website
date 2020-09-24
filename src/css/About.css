@@ -7,30 +7,51 @@
 }
 
 .about p {
+  margin: 2px;
   padding: 6px;
+  word-wrap: break-word;
 }
 
 .about-me {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 1fr;
   background-color: #ddd;
-  width: 90vw;
-  max-width: 740px;
+  width: 740px;
+  font-size: 10pt;
 }
 
 .about-me .sidebar {
   display: flex;
+  flex-direction: column;
   padding: 5px;
-  border-right: 2px solid #aaa;
+  /* border-right: 2px solid #aaa; */
+  min-width: 160px;
+}
+
+.about-me .sideImg {
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  border-radius: 6px;
+  align-self: center;
+  background-color: #333;
+  color: #999;
+  text-align: center;
 }
 
 .about-me .main {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   padding: 5px;
+  height: fit-content;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 780px) {
   .about-me {
+    grid-template-columns: auto 1fr;
     width: 94vw;
+  }
+  .about-me .main {
+    grid-template-columns: 1fr;
   }
 }
