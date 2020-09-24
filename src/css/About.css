@@ -3,4 +3,34 @@
   flex-direction: column;
   background-color: #dff;
   min-height: 80vh;
+  align-items: center;
+}
+
+.about p {
+  padding: 6px;
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background-color: #ddd;
+  width: 90vw;
+  max-width: 740px;
+}
+
+.about-me .sidebar {
+  display: flex;
+  padding: 5px;
+  border-right: 2px solid #aaa;
+}
+
+.about-me .main {
+  display: flex;
+  padding: 5px;
+}
+
+@media (max-width: 720px) {
+  .about-me {
+    width: 94vw;
+  }
 }

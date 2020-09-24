@@ -3,4 +3,5 @@
   flex-direction: column;
   background-color: #dff;
   min-height: 80vh;
+  align-items: center;
 }

@@ -11,9 +11,15 @@ function About(props) {
 
 	return (
 		<div className = 'about'>
-			<div>Top</div>
-			<h3>About page</h3>
-			<p>Subtitle</p>
+			<p>This site was built using react with no 3rd party libraries</p>
+			<div className = 'about-me'>
+				<div className = 'sidebar'>
+					<p>sidebar</p>
+				</div>
+				<div className = 'main'>
+					<p>main info</p>
+				</div>
+			</div>
 		</div>
 	);
 }
