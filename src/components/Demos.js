@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
-import '../css/Link.css';
+import '../css/Demos.css';
 
-function Link(props) {
+function Demos(props) {
 
 	useEffect(() => {
-		props.updatePage('link');
+		props.updatePage('demos');
 		window.scrollTo(0,0);
 		// eslint-disable-next-line 
 	}, [])
 
 	return (
-		<div className = 'link'>
-			<div>Top</div>
+		<div className = 'demos'>
+			<h3>Demos and stuff</h3>
 			<p>Subtitle</p>
 		</div>
 	);
 }
 
-export default Link;
+export default Demos;

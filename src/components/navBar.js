@@ -11,6 +11,13 @@ function NavBar(props) {
 	const [inSideMenu, setInSideMenu] = useState(false);
 	const [openMenu, setOpenMenu] = useState(false);
 
+	//on page load
+	useEffect(() => {
+		if (window.innerWidth <= 780) setInSideMenu(true);
+		setOpenMenu(false);
+	}, [])
+
+	//hide/show navbar on scroll
 	useEffect(() => { 
 		window.addEventListener('scroll', () => {
 			const currentY = window.pageYOffset;
@@ -32,6 +39,7 @@ function NavBar(props) {
 		})
 	})
 
+	//prevent scroll effect from firing too often
 	useEffect(() => {
 			const timeoutFunc = setTimeout(() => { setCooldown(false); }, 400);
 			return () => {
@@ -39,6 +47,7 @@ function NavBar(props) {
 			}
 	}, [cooldown])
 
+	//change to hamburger menu on window resize
 	useEffect(() => {
 		window.addEventListener('resize', () => {
 			const width = window.innerWidth;
@@ -51,6 +60,10 @@ function NavBar(props) {
 	const handleClickMenu = () => {
 		if (openMenu) setOpenMenu(false);
 		else setOpenMenu(true);
+	}
+
+	const handleClickLink = () => {
+		setOpenMenu(false);
 	}
 
 	return (
@@ -68,13 +81,13 @@ function NavBar(props) {
 				<div className = {'navLinks' + (inSideMenu ? '-in-side-menu' : '') + (openMenu ? '-open' : '')}>
 					{props.currentPage === 'home' ? 
 						<div className = 'clickedNav' style={{backgroundColor:'#1abc9c'}}>Home</div> :
-						<Link to='/' onClick={handleClickMenu}>Home</Link>}
-					{props.currentPage === 'link' ? 
-						<div className = 'clickedNav' style={{backgroundColor:'#dc6a9c'}}>Link</div> :
-						<Link to='/link' onClick={handleClickMenu}>Link</Link>}
+						<Link to='/' onClick={handleClickLink}>Home</Link>}
+					{props.currentPage === 'demos' ? 
+						<div className = 'clickedNav' style={{backgroundColor:'#dc6a9c'}}>Demos</div> :
+						<Link to='/demos' onClick={handleClickLink}>Demos</Link>}
 					{props.currentPage === 'about' ? 
 						<div className = 'clickedNav' style={{backgroundColor:'#15b2c4'}}>About</div> :
-						<Link to='/about' onClick={handleClickMenu}>About</Link>}
+						<Link to='/about' onClick={handleClickLink}>About</Link>}
 				</div>
 			</div>
 		</div>
