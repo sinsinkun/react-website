@@ -7,7 +7,6 @@ function NavBar(props) {
 
 	const [lastY, setLastY] = useState(0);
 	const [navVis, setNavVis] = useState('navVis');
-	const [cooldown, setCooldown] = useState(false);
 	const [inSideMenu, setInSideMenu] = useState(false);
 	const [openMenu, setOpenMenu] = useState(false);
 
@@ -19,33 +18,27 @@ function NavBar(props) {
 
 	//hide/show navbar on scroll
 	useEffect(() => { 
-		window.addEventListener('scroll', () => {
-			const currentY = window.pageYOffset;
-			if (currentY <= 0) {
-				console.log('top of page');
-				setNavVis('navVis');
-			}
-			if (currentY > lastY && !cooldown) {
-				console.log('make nav invisible - ' + lastY + ' to ' + currentY);
-				setNavVis('navNotVis');
-				setCooldown(true);
-			}
-			else if (currentY < lastY && !cooldown) {
-				console.log('make nav visible again - ' + lastY + ' to ' + currentY);
-				setNavVis('navVis');
-				setCooldown(true);
-			}
-			setLastY(currentY);
-		})
+		const timeoutFunc = () => setTimeout(toggleNav, 200);
+		window.addEventListener('scroll', timeoutFunc);
+		return () => window.removeEventListener('scroll', timeoutFunc);			
 	})
 
-	//prevent scroll effect from firing too often
-	useEffect(() => {
-			const timeoutFunc = setTimeout(() => { setCooldown(false); }, 400);
-			return () => {
-				clearTimeout(timeoutFunc);
-			}
-	}, [cooldown])
+	const toggleNav = () => {
+		const currentY = window.pageYOffset;
+		if (currentY <= 0) {
+			console.log('top of page');
+			setNavVis('navVis');
+		}
+		if (currentY > lastY) {
+			console.log('make nav invisible - ' + lastY + ' to ' + currentY);
+			setNavVis('navNotVis');
+		}
+		else if (currentY < lastY) {
+			console.log('make nav visible again - ' + lastY + ' to ' + currentY);
+			setNavVis('navVis');
+		}
+		setLastY(currentY);
+	}
 
 	//change to hamburger menu on window resize
 	useEffect(() => {
