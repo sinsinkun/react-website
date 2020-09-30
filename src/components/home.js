@@ -14,18 +14,20 @@ function Home(props) {
 
 	return (
 		<div className = 'home'>
-			<h3>Sub heading</h3>
+			<h3>Welcome</h3>
 			{/* to-do later */}
 			<div className = {'fade-in' + (isVisible ? '-is-visible' : '')}>
 				<div className = 'squeeze1'>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-						nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.</p>
-					<div className = 'topImage'>{' '}</div>
+					<div>
+						<p>This is a small example website I put together to play around with
+							 creating UI experiences using ReactJS, with  an emphasis on the
+							 functional aspects regarding website/React design. Responsive 
+							 design is taken into consideration when designing the various
+							 aspects of this website.</p>
+						<p>This site will be updated with more content as I find new and
+							interesting ways to manipulate objects through ReactJS.</p>
+					</div>
+					<div className = 'topImage' />
 				</div>
 			</div>
 			<div className = {'fade-in' + (isVisible ? '.is-visible' : '')}>
@@ -37,7 +39,7 @@ function Home(props) {
 						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 						culpa qui officia deserunt mollit anim id est laborum.</p>
-					<div className = 'topImage'>{' '}</div>
+					<div className = 'topImage' />
 				</div>
 			</div>
 			<div className = 'botLorem'>

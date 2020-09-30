@@ -18,6 +18,16 @@
   background-color: #ddd;
   width: 740px;
   font-size: 10pt;
+  animation: fade-in 0.7s ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .about-me .sidebar {
