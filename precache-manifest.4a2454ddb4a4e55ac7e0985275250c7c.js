@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42a64b36b6a75eeca0847fda4412a4d0",
+    "revision": "bf89ac1b7f7a6965ffe1b48d3c494f13",
     "url": "/react-website/index.html"
   },
   {
-    "revision": "1779c0d6c8175106779c",
-    "url": "/react-website/static/css/main.5025aa07.chunk.css"
+    "revision": "8040e35d8a50edb049ab",
+    "url": "/react-website/static/css/main.0a8d5550.chunk.css"
   },
   {
     "revision": "e98955bbfe9bc36dd7f2",
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-website/static/js/2.aa8b6ac4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1779c0d6c8175106779c",
-    "url": "/react-website/static/js/main.f641562b.chunk.js"
+    "revision": "8040e35d8a50edb049ab",
+    "url": "/react-website/static/js/main.eb0ca296.chunk.js"
   },
   {
     "revision": "fadfad2d28377605b9ac",
     "url": "/react-website/static/js/runtime-main.caee497b.js"
   },
   {
-    "revision": "c97a9fc29652bb4afcdac68020e5d0f7",
-    "url": "/react-website/static/media/Merriweather-Regular.c97a9fc2.ttf"
+    "revision": "d90898f8ad0e2ccfb8d901b715325d31",
+    "url": "/react-website/static/media/EastmanTrial-Regular.d90898f8.otf"
   },
   {
     "revision": "440110ce5a97042d41e8a6b78e0d9b8a",
