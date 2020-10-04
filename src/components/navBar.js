@@ -73,13 +73,13 @@ function NavBar(props) {
 				</div>
 				<div className = {'navLinks' + (inSideMenu ? '-in-side-menu' : '') + (openMenu ? '-open' : '')}>
 					{props.currentPage === 'home' ? 
-						<div className = 'clickedNav' style={{backgroundColor:'#1abc9c'}}>Home</div> :
+						<div className = 'clickedNav' style={{backgroundColor:'rgba(50,50,50,1)'}}>Home</div> :
 						<Link to='/' onClick={handleClickLink}>Home</Link>}
 					{props.currentPage === 'demos' ? 
-						<div className = 'clickedNav' style={{backgroundColor:'#dc6a9c'}}>Demos</div> :
+						<div className = 'clickedNav' style={{backgroundColor:'rgba(50,50,50,1)'}}>Demos</div> :
 						<Link to='/demos' onClick={handleClickLink}>Demos</Link>}
 					{props.currentPage === 'about' ? 
-						<div className = 'clickedNav' style={{backgroundColor:'#15b2c4'}}>About</div> :
+						<div className = 'clickedNav' style={{backgroundColor:'rgba(50,50,50,1)'}}>About</div> :
 						<Link to='/about' onClick={handleClickLink}>About</Link>}
 				</div>
 			</div>

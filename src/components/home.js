@@ -24,8 +24,10 @@ function Home(props) {
 							 functional aspects regarding website/React design. Responsive 
 							 design is taken into consideration when designing the various
 							 aspects of this website.</p>
-						<p>This site will be updated with more content as I find new and
-							interesting ways to manipulate objects through ReactJS.</p>
+						<p>I intend to use as few libraries as possible, keeping the website
+							to strictly native react functionality. This site will be updated 
+							with more content as I find new and interesting ways to manipulate 
+							objects through ReactJS.</p>
 					</div>
 					<div className = 'topImage' />
 				</div>

@@ -11,7 +11,9 @@ function About(props) {
 
 	return (
 		<div className = 'about'>
-			<p>This site was built using react with no 3rd party libraries</p>
+			<div style={{height:'40px'}}/>
+			<p>This site was built using react with no third party libraries</p>
+			<div style={{height:'20px'}} />
 			<div className = 'about-me'>
 				<div className = 'sidebar'>
 					<div className = 'sideImg'>Image</div>

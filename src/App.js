@@ -29,6 +29,7 @@ class App extends Component {
             <Route path='/demos'><Demos updatePage={this.updatePage}/></Route>
             <Route path='/about'><About updatePage={this.updatePage}/></Route>
           </Switch>
+          <div style={{height:'30px'}} />
           <Footer />
         </div>
       </Router>

@@ -1,7 +1,20 @@
 .demos {
   display: flex;
   flex-direction: column;
-  background-color: #dff;
+  background-color: rgb(66, 57, 61);
   min-height: 80vh;
   align-items: center;
+  width: clamp(720px, 80vw, 1000px);
+  box-shadow: 0 0 10px rgba(196, 196, 196, 0.8);
+}
+
+.demos h3 {
+  font-size: 30pt;
+  margin: 10vh 0;
+}
+
+@media (max-width: 780px) {
+  .demos {
+    width: 100%;
+  }
 }

@@ -1,9 +1,15 @@
 .about {
   display: flex;
   flex-direction: column;
-  background-color: #dff;
+  background-color: rgb(39, 42, 56);
   min-height: 80vh;
   align-items: center;
+  width: clamp(720px, 80vw, 1000px);
+  box-shadow: 0 0 10px rgba(196, 196, 196, 0.8);
+}
+
+.spacer {
+  height: 20px;
 }
 
 .about p {
@@ -15,10 +21,11 @@
 .about-me {
   display: grid;
   grid-template-columns: 30% 1fr;
-  background-color: #ddd;
-  width: 740px;
+  background-color: rgb(55, 46, 75);
+  width: clamp(650px, 75vw, 740px);
   font-size: 10pt;
   animation: fade-in 0.7s ease-out;
+  border: 3px outset rgba(94, 160, 172, 0.6);
 }
 
 @keyframes fade-in {
@@ -47,6 +54,7 @@
   background-color: #333;
   color: #999;
   text-align: center;
+  border: 2px solid rgba(113, 143, 148, 0.25);
 }
 
 .about-me .main {
@@ -56,10 +64,21 @@
   height: fit-content;
 }
 
+.main a:link {
+  color: #999;
+}
+
+.main a:visited {
+  color: rgb(93, 107, 170);
+}
+
 @media (max-width: 780px) {
+  .about {
+    width: 100%;
+  }
   .about-me {
     grid-template-columns: auto 1fr;
-    width: 94vw;
+    width: 90vw;
   }
   .about-me .main {
     grid-template-columns: 1fr;

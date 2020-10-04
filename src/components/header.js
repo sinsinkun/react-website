@@ -18,7 +18,7 @@ function Header(props) {
 
 	if (props.currentPage === 'home') {
 		return (
-			<div className = 'header' style={{background:'linear-gradient(#1abc9c, #dff)'}}>
+			<div className = 'header' style={homeColor}>
 				<h1 key={aKey}>Home Page</h1>
 				<p key={aKey+1}>Information {'&'} Filler Text</p>
 			</div>
@@ -26,7 +26,7 @@ function Header(props) {
 	}
 	else if (props.currentPage === 'demos') {
 		return (
-			<div className = 'header' style={{background:'linear-gradient(#dc6a9c, #dff)'}}>
+			<div className = 'header' style={demoColor}>
 				<h1 key={aKey+2}>Demos Page</h1>
 				<p key={aKey+3}> React application samples</p>
 			</div>
@@ -34,7 +34,7 @@ function Header(props) {
 	}
 	else if (props.currentPage === 'about') {
 		return (
-			<div className = 'header' style={{background:'linear-gradient(#15b2c4, #dff)'}}>
+			<div className = 'header' style={aboutColor}>
 				<h1 key={aKey+4}>About Page</h1>
 				<p key={aKey+5}>Information on site {'&'} me</p>
 			</div>
@@ -49,6 +49,16 @@ function Header(props) {
 			</div>
 		);
 	}
+}
+
+const homeColor = {
+	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(42,71,66,1) 50%, rgba(86,184,61,1) 76%, rgba(14,47,18,1) 100%)'
+}
+const demoColor = {
+	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(87,14,33,1) 50%, rgba(235,57,199,1) 76%, rgba(14,47,18,1) 100%)'
+}
+const aboutColor = {
+	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(18,28,84,1) 50%, rgba(27,174,187,1) 76%, rgba(14,47,18,1) 100%)'
 }
 
 export default Header;

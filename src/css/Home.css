@@ -1,9 +1,11 @@
 .home {
   display: flex;
   flex-direction: column;
-  background-color: #dff;
+  background-color: rgb(36, 49, 47);
   min-height: 80vh;
   align-items: center;
+  width: clamp(720px, 80vw, 1000px);
+  box-shadow: 0 0 10px rgba(196, 196, 196, 0.8);
 }
 
 .home h3 {
@@ -82,7 +84,10 @@
   margin-bottom: 40px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 780px) {
+  .home {
+    width: 100%;
+  }
   .squeeze1 {
     grid-template-columns: 1fr;
   }
