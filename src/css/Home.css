@@ -4,13 +4,30 @@
   background-color: rgb(36, 49, 47);
   min-height: 80vh;
   align-items: center;
-  width: clamp(720px, 80vw, 1000px);
+  width: clamp(775px, 80vw, 1000px);
   box-shadow: 0 0 10px rgba(196, 196, 196, 0.8);
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
 }
 
 .home h3 {
   font-size: 30pt;
-  margin: 10vh 0;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  padding: 5vh 0;
+  background-color: rgb(25, 37, 34);
 }
 
 .fade-in {
@@ -31,7 +48,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 5px;
-  margin-bottom: 40px;
   max-width: 900px;
 }
 
@@ -41,27 +57,21 @@
   line-height: 30px;
 }
 
-.topImage {
-  display: flex;
-  background-image: url('../img/space1.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 15px;
+.fillImage {
+  background-color: rgb(30,30,30);
   height: 400px;
-  width: 100%;
-  justify-content: center;
-  align-items: flex-end;
-  color: white;
-  text-shadow: 0 0 4px black, 0 0 10px darkred;
+  width: 90%;
+  justify-self: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  color: rgb(80,80,80);
 }
 
 .squeeze2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 5px;
-  margin-bottom: 40px;
   max-width: 900px;
 }
 .squeeze2 p {
@@ -81,7 +91,6 @@
   max-width: 900px;
   min-height: 20vh;
   line-height: 30px;
-  margin-bottom: 40px;
 }
 
 @media (max-width: 780px) {
@@ -95,6 +104,9 @@
     max-width: 100%;
     line-height: 20px;
   }
+  .squeeze1 .fillImage {
+    width: clamp(200px, 96%, 400px);
+  }
   .squeeze2 {
     grid-template-columns: 1fr;
   }
@@ -103,8 +115,9 @@
     max-width: 100%;
     line-height: 20px;
   }
-  .squeeze2 .topImage {
+  .squeeze2 .fillImage {
     order: 2;
+    width: clamp(200px, 96%, 400px);
   }
   .botLorem {
     max-width: 100%;

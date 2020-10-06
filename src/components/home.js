@@ -15,6 +15,7 @@ function Home(props) {
 	return (
 		<div className = 'home'>
 			<h3>Welcome</h3>
+			<div style={{height:'40px'}} />
 			{/* to-do later */}
 			<div className = {'fade-in' + (isVisible ? '-is-visible' : '')}>
 				<div className = 'squeeze1'>
@@ -29,9 +30,10 @@ function Home(props) {
 							with more content as I find new and interesting ways to manipulate 
 							objects through ReactJS.</p>
 					</div>
-					<div className = 'topImage' />
+					<div className = 'fillImage'>Image</div>
 				</div>
 			</div>
+			<div style={{height:'40px'}} />
 			<div className = {'fade-in' + (isVisible ? '.is-visible' : '')}>
 				<div className = 'squeeze2'>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -41,9 +43,10 @@ function Home(props) {
 						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 						culpa qui officia deserunt mollit anim id est laborum.</p>
-					<div className = 'topImage' />
+					<div className = 'fillImage'>Image</div>
 				</div>
 			</div>
+			<div style={{height:'40px'}} />
 			<div className = 'botLorem'>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -53,6 +56,7 @@ function Home(props) {
 				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 				culpa qui officia deserunt mollit anim id est laborum.
 			</div>
+			<div style={{height:'40px'}} />
 		</div>
 	);
 }

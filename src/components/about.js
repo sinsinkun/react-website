@@ -11,8 +11,7 @@ function About(props) {
 
 	return (
 		<div className = 'about'>
-			<div style={{height:'40px'}}/>
-			<p>This site was built using react with no third party libraries</p>
+			<h3>This site was built using react with no third party libraries</h3>
 			<div style={{height:'20px'}} />
 			<div className = 'about-me'>
 				<div className = 'sidebar'>
@@ -24,6 +23,7 @@ function About(props) {
 					<p><a href='https://github.com/sinsinkun/' target='_blank' rel='noopener noreferrer'>
 						https://github.com/sinsinkun/
 					</a></p>
+					<p>Title: </p><p>Content</p>
 				</div>
 			</div>
 		</div>

@@ -4,13 +4,29 @@
   background-color: rgb(66, 57, 61);
   min-height: 80vh;
   align-items: center;
-  width: clamp(720px, 80vw, 1000px);
+  width: clamp(775px, 80vw, 1000px);
   box-shadow: 0 0 10px rgba(196, 196, 196, 0.8);
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
 }
 
 .demos h3 {
   font-size: 30pt;
-  margin: 10vh 0;
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+  padding: 5vh 0;
+  background-color: rgb(56, 39, 44);
 }
 
 @media (max-width: 780px) {

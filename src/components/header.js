@@ -55,10 +55,10 @@ const homeColor = {
 	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(42,71,66,1) 50%, rgba(86,184,61,1) 76%, rgba(14,47,18,1) 100%)'
 }
 const demoColor = {
-	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(87,14,33,1) 50%, rgba(235,57,199,1) 76%, rgba(14,47,18,1) 100%)'
+	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(87,14,33,1) 50%, rgba(235,57,199,1) 76%, rgba(37,14,18,1) 100%)'
 }
 const aboutColor = {
-	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(18,28,84,1) 50%, rgba(27,174,187,1) 76%, rgba(14,47,18,1) 100%)'
+	background:'linear-gradient(135deg, rgba(10,4,4,1) 0%, rgba(18,28,84,1) 50%, rgba(27,174,187,1) 76%, rgba(14,17,28,1) 100%)'
 }
 
 export default Header;

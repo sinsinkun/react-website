@@ -4,12 +4,32 @@
   background-color: rgb(39, 42, 56);
   min-height: 80vh;
   align-items: center;
-  width: clamp(720px, 80vw, 1000px);
+  width: clamp(775px, 80vw, 1000px);
   box-shadow: 0 0 10px rgba(196, 196, 196, 0.8);
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .spacer {
   height: 20px;
+}
+
+.about h3 {
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+  padding: 7vh 0;
+  background-color: rgb(31, 33, 41);
 }
 
 .about p {
@@ -24,24 +44,14 @@
   background-color: rgb(55, 46, 75);
   width: clamp(650px, 75vw, 740px);
   font-size: 10pt;
-  animation: fade-in 0.7s ease-out;
-  border: 3px outset rgba(94, 160, 172, 0.6);
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fade-in 0.5s ease-in;
+  border: 1px solid rgba(46, 84, 86, 0.6);
 }
 
 .about-me .sidebar {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  /* border-right: 2px solid #aaa; */
   min-width: 160px;
 }
 
@@ -62,14 +72,6 @@
   grid-template-columns: auto 1fr;
   padding: 5px;
   height: fit-content;
-}
-
-.main a:link {
-  color: #999;
-}
-
-.main a:visited {
-  color: rgb(93, 107, 170);
 }
 
 @media (max-width: 780px) {
