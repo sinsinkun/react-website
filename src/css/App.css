@@ -18,6 +18,13 @@ body {
   color: white;
 }
 
+body p {
+  word-wrap: break-word;
+  word-break: break-word;
+  -ms-word-break: break-all;
+  overflow-wrap: break-word;
+}
+
 body a:link {
   color: #999;
 }
