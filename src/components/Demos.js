@@ -12,7 +12,7 @@ function Demos(props) {
 	return (
 		<div className = 'demos'>
 			<h3>Demos and stuff</h3>
-			<p>Subtitle</p>
+			<p>More mini projects coming soon</p>
 		</div>
 	);
 }

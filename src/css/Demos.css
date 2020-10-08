@@ -28,6 +28,11 @@
   background-color: rgb(56, 39, 44);
 }
 
+.demos p {
+  margin: 2px;
+  padding: 6px;
+}
+
 @media (max-width: 780px) {
   .demos {
     width: 100%;
