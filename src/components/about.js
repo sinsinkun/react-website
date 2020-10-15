@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import '../css/About.css';
+import ScrollableBio from './ScrollableBio.js';
 
 function About(props) {
 
@@ -18,22 +19,19 @@ function About(props) {
 				<div className = 'sidebar'>
 					<div className = 'sideImg'>Image</div>
 				</div>
-				<div className = 'main'>
-					<p>Creator: </p><p>JingChang Xiao</p>
-					<p>Github: </p>
-					<p><a href='https://github.com/sinsinkun/' target='_blank' rel='noopener noreferrer'>
+				<div className = 'info'>
+					<p>Creator: JingChang Xiao</p>
+					<p>Github: <a href='https://github.com/sinsinkun/' target='_blank' rel='noopener noreferrer'>
 						https://github.com/sinsinkun/
 					</a></p>
-					<p>Phone Number: </p><p>416 834 7055</p>
+					<p>Phone Number: 416 834 7055</p>
+				</div>
+				<div className = 'scrollable-bio'>
+					<ScrollableBio />
 				</div>
 			</div>
-			<div style={{height:'40px'}} />
+			<div style={{height:'20px'}} />
 			{/* Second Block */}
-			<div className = 'about-me'>
-				<p>Scrollable bio coming soon</p>
-			</div>
-			<div style={{height:'40px'}} />
-			{/* Third Block */}
 			<div className = 'about-me'>
 					<p>Other Projects: </p>
 					<p><a href='https://saqlain.pro/' target='_blank' rel='noopener noreferrer'>

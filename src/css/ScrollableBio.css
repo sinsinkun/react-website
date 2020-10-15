@@ -1,0 +1,62 @@
+.scrollable-container {
+  position: relative;
+  height: 600px;
+  background-color: rgb(85, 85, 85);
+  text-align: center;
+}
+
+.scroll-nav {
+  background-color: rgb(136, 136, 136);
+  width: 100%;
+  height: 30px;
+  padding: 0 0;
+  margin-top: 0;
+  position: absolute;
+}
+
+.scroll-nav button {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  padding: 0 0;
+  border-style: none;
+  margin: 8px 6px;
+}
+
+.scroll-nav button:hover {
+  background-color: rgb(141, 78, 223);
+  cursor: pointer;
+}
+
+.scroll-nav button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.scroll-nav .button-clicked {
+  background-color: rgb(141, 78, 223);
+  cursor: default !important;
+}
+
+.scroll-main {
+  top: 30px;
+  width: 100%;
+  height: calc(100% - 30px);
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.scroll-main::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll-main::-webkit-scrollbar:start {
+  background:transparent
+}
+.scroll-main::-webkit-scrollbar:end {
+  background:transparent
+}
+.scroll-main::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10rem;
+}

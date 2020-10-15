@@ -164,6 +164,10 @@ body a:visited {
   color: black;
 }
 
+.navLinks-in-side-menu-open a:focus {
+  outline: none;
+}
+
 .navLinks-in-side-menu-open .clickedNav {
   padding: 8px 10px;
   text-align: center;
@@ -245,6 +249,10 @@ body a:visited {
 .footer button:hover {
   background-color: #666;
   cursor: pointer;
+}
+
+.footer button:focus {
+  outline: none;
 }
 
 @media (max-width: 720px) {
