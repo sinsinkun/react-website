@@ -24,12 +24,14 @@ function About(props) {
 					<p><a href='https://github.com/sinsinkun/' target='_blank' rel='noopener noreferrer'>
 						https://github.com/sinsinkun/
 					</a></p>
-					<p>Phone Number: </p><p style={numStyle}>416 834 7055</p>
+					<p>Phone Number: </p><p>416 834 7055</p>
 				</div>
 			</div>
 			<div style={{height:'40px'}} />
 			{/* Second Block */}
-			<div>Scrollable bio coming soon</div>
+			<div className = 'about-me'>
+				<p>Scrollable bio coming soon</p>
+			</div>
 			<div style={{height:'40px'}} />
 			{/* Third Block */}
 			<div className = 'about-me'>
@@ -41,11 +43,6 @@ function About(props) {
 			<div style={{height:'40px'}} />
 		</div>
 	);
-}
-
-const numStyle = {
-	fontFamily:'geneva',
-	fontSize:'11pt'
 }
 
 export default About;
