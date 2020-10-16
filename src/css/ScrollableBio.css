@@ -1,6 +1,6 @@
 .scrollable-container {
   position: relative;
-  height: 600px;
+  height: 400px;
   background-color: rgb(85, 85, 85);
   text-align: center;
 }
@@ -43,18 +43,14 @@
   width: 100%;
   height: calc(100% - 30px);
   position: absolute;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 100% 100% 100%;
 }
 
 .scroll-main::-webkit-scrollbar {
   width: 10px;
-}
-.scroll-main::-webkit-scrollbar:start {
-  background:transparent
-}
-.scroll-main::-webkit-scrollbar:end {
-  background:transparent
+  background: transparent;
 }
 .scroll-main::-webkit-scrollbar-thumb {
   background-color: rgba(0,0,0,0.4);

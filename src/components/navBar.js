@@ -25,18 +25,9 @@ function NavBar(props) {
 
 	const toggleNav = () => {
 		const currentY = window.pageYOffset;
-		if (currentY <= 0) {
-			console.log('top of page');
-			setNavVis('navVis');
-		}
-		if (currentY > lastY) {
-			console.log('make nav invisible - ' + lastY + ' to ' + currentY);
-			setNavVis('navNotVis');
-		}
-		else if (currentY < lastY) {
-			console.log('make nav visible again - ' + lastY + ' to ' + currentY);
-			setNavVis('navVis');
-		}
+		if (currentY <= 0) setNavVis('navVis');
+		if (currentY > lastY) setNavVis('navNotVis');
+		else if (currentY < lastY) setNavVis('navVis');
 		setLastY(currentY);
 	}
 
