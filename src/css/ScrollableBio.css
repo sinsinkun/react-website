@@ -44,8 +44,6 @@
   height: calc(100% - 30px);
   position: absolute;
   overflow-y: auto;
-  display: grid;
-  grid-template-columns: 100% 100% 100%;
 }
 
 .scroll-main::-webkit-scrollbar {
@@ -55,4 +53,21 @@
 .scroll-main::-webkit-scrollbar-thumb {
   background-color: rgba(0,0,0,0.4);
   border-radius: 10rem;
+}
+
+.scroll-main h3 {
+  padding: 15px 0;
+  background-color: rgb(65, 64, 70);
+  margin-bottom: 3px;
+}
+
+.scroll-main table {
+  width: 100%;
+}
+.scroll-main th, td {
+  text-align: center;
+  background-color: rgb(65, 64, 70);
+}
+.scroll-main tr {
+  text-align: left;
 }
