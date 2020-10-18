@@ -2,7 +2,7 @@
   "name": "react-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://sinsinkun.github.io/react-website",
+  "homepage": "http://changxiao.me",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
