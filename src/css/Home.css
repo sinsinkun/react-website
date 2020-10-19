@@ -65,6 +65,7 @@
   padding-bottom: 200px;
   text-align: center;
   color: rgb(80,80,80);
+  user-select: none;
 }
 
 .squeeze2 {
@@ -78,11 +79,6 @@
   max-width: 50vw;
   padding: 0 15px;
   line-height: 30px;
-}
-
-.squeeze2 .topImage {
-  order: 1;
-  background-image: url('../img/space2.jpg');
 }
 
 .botLorem {

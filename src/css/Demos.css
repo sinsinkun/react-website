@@ -33,6 +33,21 @@
   padding: 6px;
 }
 
+.demos .demo-placeholder {
+  width: 720px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(100,100,100);
+  user-select: none;
+}
+
+.demos .demo-placeholder:hover {
+  background-color: rgb(120,120,120);
+  cursor: pointer;
+}
+
 @media (max-width: 780px) {
   .demos {
     width: 100%;

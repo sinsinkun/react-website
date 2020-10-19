@@ -126,6 +126,7 @@ body a:visited {
   width: 15vw;
   color: white;
   list-style: none;
+  user-select: none;
 }
 
 .navBar a:hover {
@@ -138,6 +139,7 @@ body a:visited {
   text-align: center;
   color: white;
   width: 15vw;
+  user-select: none;
 }
 
 .navLinks-in-side-menu-open {

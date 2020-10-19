@@ -17,7 +17,7 @@ function About(props) {
 			{/* First Block */}
 			<div className = 'about-me'>
 				<div className = 'sidebar'>
-					<div className = 'sideImg'>Image</div>
+					<div className = 'sideImg' />
 				</div>
 				<div className = 'info'>
 					<p>Creator: JingChang Xiao</p>
