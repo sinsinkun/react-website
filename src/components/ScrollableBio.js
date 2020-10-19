@@ -52,6 +52,7 @@ const page1 = {pageNum:1, info:(
       <tr><p>- Work well both independently and as part of a group</p></tr>
       <tr><p>- Quick learner, easily capable of picking up new information</p></tr>
       <tr><p>- Experience with project management software (e.g. Solidworks PDM, CATIA 3DE)</p></tr>
+      <tr><p>- Highly proficient in Solidworks and AutoCAD</p></tr>
       <tr><p>- Very familiar with Microsoft Office</p></tr>
     </table>
   </div>

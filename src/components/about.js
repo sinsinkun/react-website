@@ -21,10 +21,11 @@ function About(props) {
 				</div>
 				<div className = 'info'>
 					<p>Creator: JingChang Xiao</p>
+					<p>Email: chang.x1994@gmail.com</p>
+					<p>Phone Number: 416 834 7055</p>
 					<p>Github: <a href='https://github.com/sinsinkun/' target='_blank' rel='noopener noreferrer'>
 						https://github.com/sinsinkun/
 					</a></p>
-					<p>Phone Number: 416 834 7055</p>
 				</div>
 				<div className = 'scrollable-bio'>
 					<ScrollableBio />
