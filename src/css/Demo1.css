@@ -15,6 +15,18 @@
   background-color: rgb(20, 88, 128);
   border-top: 3px solid rgb(168, 168, 168);
   border-bottom: 3px solid rgb(168, 168, 168);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+}
+
+.placementSpot {
+  height: 86px;
+  width: 86px;
+  border-radius: 50%;
+  background-color: rgb(36, 112, 156);
+  align-self: center;
 }
 
 .hex {
