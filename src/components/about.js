@@ -12,7 +12,7 @@ function About(props) {
 
 	return (
 		<div className = 'about'>
-			<h3>This site was built using react with no third party libraries</h3>
+			<h3>This site was built using reactJS</h3>
 			<div style={{height:'20px'}} />
 			{/* First Block */}
 			<div className = 'about-me'>

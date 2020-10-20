@@ -43,13 +43,12 @@
   user-select: none;
 }
 
-.demos .demo-placeholder:hover {
-  background-color: rgb(120,120,120);
-  cursor: pointer;
-}
-
 @media (max-width: 780px) {
   .demos {
     width: 100%;
+  }
+  .demos .demo-placeholder {
+    width: 80%;
+    height: 200px;
   }
 }
