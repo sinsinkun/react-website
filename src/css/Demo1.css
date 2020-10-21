@@ -37,5 +37,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 9pt;
+  background-color: rgb(230, 230, 197);
+  color: rgb(42, 119, 129);
+  font-size: 50px;
+  box-shadow: inset -2px -4px rgb(177, 177, 149), inset 2px 2px rgb(243, 243, 237);
+}
+
+.flipped {
+  background-color: rgb(177, 177, 149);
+  box-shadow: inset -2px -4px rgb(139, 139, 117), inset 2px 2px rgb(192, 192, 178);
 }
