@@ -30,7 +30,7 @@ function Home(props) {
 							usability. This site will be updated with more content as I find new and 
 							interesting ways to manipulate objects through ReactJS.</p>
 					</div>
-					<div className = 'fillImage'>Image</div>
+					<div className = 'fillImage'>Placeholder Image</div>
 				</div>
 			</div>
 			<div style={{height:'40px'}} />
@@ -43,7 +43,7 @@ function Home(props) {
 						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 						culpa qui officia deserunt mollit anim id est laborum.</p>
-					<div className = 'fillImage'>Image</div>
+					<div className = 'fillImage'>Placeholder Image</div>
 				</div>
 			</div>
 			<div style={{height:'40px'}} />
