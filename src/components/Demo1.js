@@ -21,10 +21,10 @@ function Demo1() {
     for (let i=0; i<7; i++) {
       if (e.target.id === `p${i}`) {
         //snap to placement spots
-        if (d.y > 70 && d.y < 110) {
+        if (d.y > 60 && d.y < 120) {
           let foundPlacement = false;
           for (let j=0; j<7; j++) {
-            if ( d.x > placementSpots[j].x - 30 && d.x < placementSpots[j].x + 30) {
+            if ( d.x > placementSpots[j].x - 50 && d.x < placementSpots[j].x + 50) {
               setPieceList[i]({x: placementSpots[j].x, y: 90, flipped:true})
               foundPlacement = true;
             }
