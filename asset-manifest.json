@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.d363a477.chunk.css",
-    "main.js": "/static/js/main.3cff52bd.chunk.js",
-    "main.js.map": "/static/js/main.3cff52bd.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.39870823.js",
-    "runtime-main.js.map": "/static/js/runtime-main.39870823.js.map",
-    "static/js/2.84fc7792.chunk.js": "/static/js/2.84fc7792.chunk.js",
-    "static/js/2.84fc7792.chunk.js.map": "/static/js/2.84fc7792.chunk.js.map",
+    "main.css": "/static/css/main.885f684e.chunk.css",
+    "main.js": "/static/js/main.258ab6df.chunk.js",
+    "main.js.map": "/static/js/main.258ab6df.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d423ee3e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d423ee3e.js.map",
+    "static/js/2.5849927c.chunk.js": "/static/js/2.5849927c.chunk.js",
+    "static/js/2.5849927c.chunk.js.map": "/static/js/2.5849927c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0a60c94331307883512cf4573aaa9d12.js": "/precache-manifest.0a60c94331307883512cf4573aaa9d12.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.d363a477.chunk.css.map": "/static/css/main.d363a477.chunk.css.map",
-    "static/js/2.84fc7792.chunk.js.LICENSE.txt": "/static/js/2.84fc7792.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/space1.21c3d42b.jpg",
-    "static/media/personal_logo_inverted.png": "/static/media/personal_logo_inverted.440110ce.png",
-    "static/media/About.css": "/static/media/profilePhotoS.1a949599.jpg"
+    "static/css/main.885f684e.chunk.css.map": "/static/css/main.885f684e.chunk.css.map",
+    "static/js/2.5849927c.chunk.js.LICENSE.txt": "/static/js/2.5849927c.chunk.js.LICENSE.txt",
+    "static/media/JingChang_Xiao_Resume.718c3d2b.pdf": "/static/media/JingChang_Xiao_Resume.718c3d2b.pdf",
+    "static/media/budget.d228ffed.png": "/static/media/budget.d228ffed.png",
+    "static/media/burgerlogger.a6e4c633.png": "/static/media/burgerlogger.a6e4c633.png",
+    "static/media/googlebooks.33a3cd29.png": "/static/media/googlebooks.33a3cd29.png",
+    "static/media/profile.4de8fccf.jpg": "/static/media/profile.4de8fccf.jpg",
+    "static/media/socketim.9471ed4a.png": "/static/media/socketim.9471ed4a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.39870823.js",
-    "static/js/2.84fc7792.chunk.js",
-    "static/css/main.d363a477.chunk.css",
-    "static/js/main.3cff52bd.chunk.js"
+    "static/js/runtime-main.d423ee3e.js",
+    "static/js/2.5849927c.chunk.js",
+    "static/css/main.885f684e.chunk.css",
+    "static/js/main.258ab6df.chunk.js"
   ]
 }
