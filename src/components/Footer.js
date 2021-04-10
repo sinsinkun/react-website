@@ -1,19 +1,11 @@
-import React from 'react';
-import '../css/App.css';
-
-function onClick() {
-  window.scrollTo(0,0);
-}
-
-function Footer(props) {
-
-  return (
-    <div className = 'footer'>
-      <p></p>
-      <p>Site in progress</p>
-      <button onClick={onClick}>Back to Top</button>
-    </div>
-  );
+function Footer() {
+  return(
+    <footer className="footer mt-auto py-3 bg-dark">
+      <div className="container-fluid text-center">
+        <span className="text-light">JingChang Xiao</span> <span className="text-muted">React Portfolio 2021</span>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer;
