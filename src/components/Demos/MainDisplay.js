@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PopoutDemo from './Popout';
+import ReactiveDemo from './Reactive';
+import DragDemo from './Drag';
 import './demos.css';
 
 function MainDisplay() {
@@ -22,6 +24,8 @@ function MainDisplay() {
         This page is still a work in progress, so not all demos are available yet.
       </span>);
     else if (demo === "popout") return <PopoutDemo />;
+    else if (demo === "reactive") return <ReactiveDemo />;
+    else if (demo === "dragdrop") return <DragDemo />;
     else return <span>{demo} demo coming soon...</span>;
   }
 

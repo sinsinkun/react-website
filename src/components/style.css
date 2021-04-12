@@ -220,6 +220,9 @@ li {
 .logo-img {
   width: 50%;
   max-width: 100px;
+  background: linear-gradient(-35deg, transparent 49%, rgba(233, 252, 255, 0.5) 50%, transparent 51%);
+	background-size: 400% 400%;
+  animation: gloss-shine 4s ease-in-out infinite;
 }
 
 /* ------------------- */
@@ -362,6 +365,11 @@ li {
 @keyframes slide-to-right {
   0% { transform: translateX(0) }
   100% { transform: translateX(100%) }
+}
+
+@keyframes gloss-shine {
+  0% { background-position: 100% 50% }
+	15%, 100% { background-position: 0% 50% }
 }
 
 /* ------------------- */
