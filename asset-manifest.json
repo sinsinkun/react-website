@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.a61fd8fc.chunk.css",
-    "main.js": "/static/js/main.97ec8c94.chunk.js",
-    "main.js.map": "/static/js/main.97ec8c94.chunk.js.map",
+    "main.css": "/static/css/main.2c388cab.chunk.css",
+    "main.js": "/static/js/main.70037d96.chunk.js",
+    "main.js.map": "/static/js/main.70037d96.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d423ee3e.js",
     "runtime-main.js.map": "/static/js/runtime-main.d423ee3e.js.map",
     "static/js/2.9fb99a4e.chunk.js": "/static/js/2.9fb99a4e.chunk.js",
     "static/js/2.9fb99a4e.chunk.js.map": "/static/js/2.9fb99a4e.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a61fd8fc.chunk.css.map": "/static/css/main.a61fd8fc.chunk.css.map",
+    "static/css/main.2c388cab.chunk.css.map": "/static/css/main.2c388cab.chunk.css.map",
     "static/js/2.9fb99a4e.chunk.js.LICENSE.txt": "/static/js/2.9fb99a4e.chunk.js.LICENSE.txt",
     "static/media/JingChang_Xiao_Resume.718c3d2b.pdf": "/static/media/JingChang_Xiao_Resume.718c3d2b.pdf",
     "static/media/budget.d228ffed.png": "/static/media/budget.d228ffed.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.d423ee3e.js",
     "static/js/2.9fb99a4e.chunk.js",
-    "static/css/main.a61fd8fc.chunk.css",
-    "static/js/main.97ec8c94.chunk.js"
+    "static/css/main.2c388cab.chunk.css",
+    "static/js/main.70037d96.chunk.js"
   ]
 }
