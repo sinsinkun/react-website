@@ -32,14 +32,12 @@ const projects = [
 ]
 
 function Projects() {
-  return (
-    <div className="my-3">
-      <div className="card card-md mx-auto">
-        <div className="card-header">
-          <h4 className="card-title">Past Projects</h4>
-        </div>
+  return(
+    <div className="container">
+      <div style={{width:"80%"}}>
+        <h1>Projects page</h1>
         {projects.map(
-          project => <ProjectEntry name={project.name} link={project.link} 
+          project => <ProjectEntry name={project.name} link={project.link} key={project.name}
             image={project.image} gitLink={project.gitLink} description={project.description} />
         )}
       </div>

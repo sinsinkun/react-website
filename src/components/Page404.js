@@ -1,9 +1,8 @@
 function Page404() {
   return(
-    <div className="text-center" style={{marginTop:"8rem"}}>
-      <h2>PAGE NOT FOUND</h2>
-      <br/>
-      <p>The page you are looking for could not be found...</p>
+    <div className="container">
+      <h2 style={{fontSize:"30pt", marginTop:"8rem"}}>404 Error</h2>
+      <p>Page not found</p>
     </div>
   )
 }

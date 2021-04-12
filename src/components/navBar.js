@@ -1,46 +1,55 @@
-import { NavLink } from 'react-router-dom';
-import { useEffect, useContext } from 'react';
-import { winDimContext } from '../App';
+import { useRef } from "react";
+import { NavLink } from "react-router-dom";
+import { useStoreContext } from './GlobalStore';
 
-function Navbar(props) {
+function Navbar() {
+  
+  const [store] = useStoreContext();
+  const navSide = useRef(null);
+  const invisBg = useRef(null);
 
-  const winSize = useContext(winDimContext);
-
-  useEffect(() => {
-    if (winSize.x >= 780) props.toggleSideNav(false);
-    // eslint-disable-next-line
-  }, [winSize])
-
-  function openSideNav() {
-    // on click, show sidenav
-    if (props.showSideNav) props.toggleSideNav(false);
-    else props.toggleSideNav(true);
+  function openNavSide() {
+    if (navSide.current.classList.contains("hidden")) {
+      navSide.current.classList.remove("hidden");
+      invisBg.current.classList.remove("hidden");
+    }
+    else {
+      navSide.current.classList.add("hidden");
+      invisBg.current.classList.add("hidden");
+    }
   }
-  // desktop screen size
-  return(
-    <nav className="navbar navbar-expand navbar-dark bg-dark">
-      <div className="container-fluid">
-        <div className="navbar-brand">
-          JingChang Xiao
-        </div>
-        {winSize.x > 780 ? 
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink exact to="/" className="nav-link" activeClassName="active">About</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/projects" className="nav-link" activeClassName="active">Past Projects</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/contact" className="nav-link" activeClassName="active">Contact Me</NavLink>
-            </li>
-          </ul> : 
-          <button className="btn" style={{color:"lightgrey"}} onClick={openSideNav}>
-            <span>Menu</span>
-          </button>
-        }
+
+  if (store.winX > 980) return(
+    <div className="navbar">
+      <span>JingChang Xiao</span>
+      <div className="navbar-mid"></div>
+      <div className="navbar-nav">
+        <NavLink exact to="/" activeClassName="active" className="navlinks">HOME</NavLink>
+        <NavLink to="/demos" activeClassName="active" className="navlinks">DEMOS</NavLink>
+        <NavLink to="/projects" activeClassName="active" className="navlinks">PROJECTS</NavLink>
+        <NavLink to="/about" activeClassName="active" className="navlinks">ABOUT ME</NavLink>
       </div>
-    </nav>
+    </div>
+  )
+  else return(
+    <>
+      <div className="navbar">
+        <span>JingChang Xiao</span>
+        <div className="navbar-mid"></div>
+        <div className="navbar-nav">
+          <button className="navlinks" onClick={openNavSide}>
+            <div className="hamburger"></div>
+          </button>
+        </div>
+      </div>
+      <div className="nav-side hidden" ref={navSide} onClick={openNavSide}>
+        <NavLink exact to="/" activeClassName="active" className="navlinks">HOME</NavLink>
+        <NavLink to="/demos" activeClassName="active" className="navlinks">DEMOS</NavLink>
+        <NavLink to="/projects" activeClassName="active" className="navlinks">PROJECTS</NavLink>
+        <NavLink to="/about" activeClassName="active" className="navlinks">ABOUT ME</NavLink>
+      </div>
+      <div className="invis-bg hidden" ref={invisBg} onClick={openNavSide}></div>
+    </>
   )
 }
 
