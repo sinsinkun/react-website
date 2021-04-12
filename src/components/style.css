@@ -14,7 +14,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin: 0;
-  min-width: 350px;
   width: 100vw;
   overflow: hidden;
 }
@@ -222,6 +221,7 @@ li {
 .sidebar {
   background-color: rgb(52, 52, 66);
   height: calc(100vh - 5rem);
+  min-width: 18px;
   width: 25%;
   max-width: 350px;
   padding: 0.5rem;
@@ -373,5 +373,9 @@ li {
 @media screen and (max-width:600px) {
   .container {
     margin: 0 0;
+  }
+  
+  .profile-img {
+    width: 50%;
   }
 }
