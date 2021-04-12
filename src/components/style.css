@@ -14,6 +14,10 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin: 0;
+}
+
+.root {
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -374,7 +378,7 @@ li {
   .container {
     margin: 0 0;
   }
-  
+
   .profile-img {
     width: 50%;
   }
