@@ -15,6 +15,7 @@ body {
   color: white;
   margin: 0;
   min-width: 350px;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -183,6 +184,11 @@ li {
   right: 0;
   z-index: 20;
   text-align: right;
+  animation: slide-from-right 0.2s ease-out;
+}
+
+.nav-side.closing {
+  animation: slide-to-right 0.25s ease-in;
 }
 
 .nav-side .navlinks {
@@ -225,15 +231,20 @@ li {
   cursor: pointer;
 }
 
+.sidebar.closed:hover {
+  background-color: rgb(62, 62, 82);
+}
+
 .sidebar.open {
   position: absolute;
   top: 0;
   left: 0;
   width: 70%;
+  animation: slide-from-left 0.2s ease-out;
 }
 
-.sidebar.closed:hover {
-  background-color: rgb(62, 62, 82);
+.sidebar.open.closing {
+  animation: slide-to-left 0.25s ease-in;
 }
 
 .sidebar-title {
@@ -318,6 +329,28 @@ li {
   float: left;
   margin-right: 1rem;
   margin-bottom: 0.2rem;
+}
+/* ---------------- */
+/* -- ANIMATIONS -- */
+/* ---------------- */
+@keyframes slide-from-left {
+  0% { transform: translateX(-100%) }
+  100% { transform: translateX(0) }
+}
+
+@keyframes slide-to-left {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-100%) }
+}
+
+@keyframes slide-from-right {
+  0% { transform: translateX(100%) }
+  100% { transform: translateX(0) }
+}
+
+@keyframes slide-to-right {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(100%) }
 }
 
 /* ------------------- */

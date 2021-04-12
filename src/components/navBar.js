@@ -14,8 +14,12 @@ function Navbar() {
       invisBg.current.classList.remove("hidden");
     }
     else {
-      navSide.current.classList.add("hidden");
+      navSide.current.classList.add("closing");
       invisBg.current.classList.add("hidden");
+      setTimeout(() =>{
+        navSide.current.classList.add("hidden");
+        navSide.current.classList.remove("closing");
+      }, 200)
     }
   }
 

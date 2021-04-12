@@ -3,14 +3,29 @@ import { useRef, useState } from 'react';
 function PopoutDemo() {
 
   const tabDiv = useRef(null);
+  const tabDiv2 = useRef(null);
   const [showTab, setShowTab] = useState(false);
 
   function toggleTab() {
-    tabDiv.current.classList.toggle("hidden")
+    if (tabDiv.current.classList.contains("hidden")) tabDiv.current.classList.remove("hidden");
+    else {
+      tabDiv.current.classList.add("closing");
+      setTimeout(() => {
+        tabDiv.current.classList.add("hidden");
+        tabDiv.current.classList.remove("closing");
+      }, 200)
+    }
   }
 
   function toggleTab2() {
-    setShowTab(prev => !prev);
+    if (showTab) {
+      tabDiv2.current.classList.add("closing");
+      setTimeout(() => {
+        tabDiv2.current.classList.remove("closing");
+        setShowTab(false);
+      }, 200)
+    }
+    else setShowTab(true);
   }
 
   return(
@@ -40,7 +55,7 @@ function PopoutDemo() {
       </div>
       <br/>
       <button onClick={toggleTab2}>Click to open tab</button>
-      {showTab ? <div className="demo-tab">Tab</div> : "" }
+      {showTab ? <div className="demo-tab" ref={tabDiv2} >Tab</div> : "" }
     </div>
     </>
     

@@ -19,8 +19,13 @@ function Sidebar() {
       invisBg.current.classList.remove("hidden");
     }
     else {
-      sideDiv.current.classList.add("hidden");
+      sideDiv.current.classList.add("closing");
       invisBg.current.classList.add("hidden");
+      // hide side div after closing animation has finished
+      setTimeout(() => {
+        sideDiv.current.classList.add("hidden");
+        sideDiv.current.classList.remove("closing");
+      }, 200)
     }
   }
 

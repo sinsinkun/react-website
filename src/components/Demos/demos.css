@@ -6,6 +6,7 @@
   position: relative;
   text-align: left;
   padding: 0.5rem;
+  overflow: hidden;
 }
 
 .demo-tab {
@@ -16,4 +17,9 @@
   width: 40%;
   background-color: rgb(62, 64, 83);
   padding: 0.5rem;
+  animation: slide-from-right 0.2s ease-out;
+}
+
+.demo-tab.closing {
+  animation: slide-to-right 0.25s ease-out;
 }
