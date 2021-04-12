@@ -11,7 +11,11 @@ function Navbar() {
   function openNavSide() {
     if (navSide.current.classList.contains("hidden")) {
       navSide.current.classList.remove("hidden");
+      navSide.current.classList.add("opening");
       invisBg.current.classList.remove("hidden");
+      setTimeout(() => {
+        navSide.current.classList.remove("opening");
+      }, 200)
     }
     else {
       navSide.current.classList.add("closing");

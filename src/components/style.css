@@ -185,7 +185,10 @@ li {
   right: 0;
   z-index: 20;
   text-align: right;
-  animation: slide-from-right 0.2s ease-out;
+}
+
+.nav-side.opening {
+  animation: slide-from-right 0.25s ease-out;
 }
 
 .nav-side.closing {
