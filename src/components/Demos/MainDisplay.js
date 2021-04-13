@@ -4,6 +4,7 @@ import PopoutDemo from './Popout';
 import ReactiveDemo from './Reactive';
 import DragDemo from './Drag';
 import './demos.css';
+import NoDemo from './NoDemo';
 
 function MainDisplay() {
 
@@ -17,12 +18,7 @@ function MainDisplay() {
   }, [loc])
 
   function renderDemo() {
-    if (demo === "none") return(
-      <span>
-        Click on any of the demos on the sidebar to view them <br/> 
-        &lt;--- <br/>
-        This page is still a work in progress, so not all demos are available yet.
-      </span>);
+    if (demo === "none") return <NoDemo />;
     else if (demo === "popout") return <PopoutDemo />;
     else if (demo === "reactive") return <ReactiveDemo />;
     else if (demo === "dragdrop") return <DragDemo />;

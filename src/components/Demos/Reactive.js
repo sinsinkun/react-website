@@ -27,7 +27,6 @@ function ReactiveDemo () {
   useEffect(() => {
     // if drag changed to true, add event listeners
     if (drag) {
-      console.log(window);
       window.addEventListener('mousemove', trackMouse);
       window.addEventListener('mouseup', removeTrack);
     }

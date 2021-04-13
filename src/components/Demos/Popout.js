@@ -32,7 +32,7 @@ function PopoutDemo() {
     <>
     <div className="demo-container">
       <div>
-        <h4>CSS Implementation</h4>
+        <h4>Popout tabs using CSS</h4>
         <p>
           This involves having a div element that is hidden via a special class,
           wherein the div is unhidden by modifying the div's class list. This is the classical approach
@@ -45,7 +45,7 @@ function PopoutDemo() {
     </div>
     <div className="demo-container">
       <div>
-        <h4>React Implementation</h4>
+        <h4>Popout tabs using React virtual DOM</h4>
         <p>
           This involves having a state variable that tracks whether or not the tab
           is showing, and modifies the DOM itself to generate a new popout tab when that state is changed
