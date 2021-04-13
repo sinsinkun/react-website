@@ -1,3 +1,4 @@
+/* -- Popout demo CSS -- */
 .demo-container {
   background-color: rgb(99, 101, 129);
   min-height: 100px;
@@ -22,4 +23,31 @@
 
 .demo-tab.closing {
   animation: slide-to-right 0.25s ease-out;
+}
+
+/* -- Reactive CSS -- */
+
+.demo-exp {
+  margin-right: 10px;
+  min-width: 250px;
+}
+
+.demo-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10px;
+  background-color: rgb(117, 118, 124);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 0.5rem;
+  cursor:e-resize;
+}
+
+.demo-handle:hover {
+  background-color: rgb(140, 142, 158);
 }
