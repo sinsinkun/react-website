@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useStoreContext } from '../GlobalStore';
 
+// non-render essential variables
+let initMouseX = 0;
+let initWidth = 0;
+
 function ReactiveDemo () {
 
   const [store] = useStoreContext();
@@ -16,13 +20,12 @@ function ReactiveDemo () {
   useEffect(() => {
     // if drag changed to true, add event listeners
     if (drag) {
-      console.log("adding listeners");
+      console.log(window);
       window.addEventListener('mousemove', trackMouse);
       window.addEventListener('mouseup', removeTrack);
     }
     // if drag changed to false, remove event listeners
     else {
-      console.log("removing listeners");
       window.removeEventListener('mousemove', trackMouse);
       window.removeEventListener('mouseup', removeTrack);
     }
@@ -31,9 +34,9 @@ function ReactiveDemo () {
 
   // useCallback saves the "id" of the function on re-renders
   const trackMouse = useCallback((e) => { 
-    if (width > 250) setWidth(prev => prev + e.movementX);
-    else setWidth(250);
-    // eslint-disable-next-line
+    let deltaX = e.clientX - initMouseX;
+    // min width 250px
+    if (initWidth + deltaX > 250) setWidth(initWidth + deltaX); 
   }, []);
   const removeTrack = useCallback(() => { setDrag(false) }, []);
 
@@ -48,10 +51,13 @@ function ReactiveDemo () {
           change, depending on whether you are viewing this page on a phone or a desktop PC.
         </p>
         <p>
-          ...
+          This container's size can also be modified using the handle on the right (if you are
+          viewing this page on a PC). The squares below will adjust their positioning and size
+          based on the size of the container. This demo is best viewed on a PC.
         </p>
       </div>
-      <div className="demo-handle" ref={handle} onMouseDown={() => setDrag(true)} >
+      <div className="demo-handle" ref={handle} 
+        onMouseDown={(e)=>{ initMouseX=e.clientX; initWidth=width; setDrag(true) }}>
         .<br/>.<br/>.
       </div>
     </div>

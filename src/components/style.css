@@ -33,11 +33,13 @@ body {
   background-color: rgba(255,255,255,0.05);
   background-clip: padding-box;
   border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgba(135, 182, 209, 0.2);
   background-clip: padding-box;
   border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 ::-webkit-scrollbar-button {
   width: 8px;
@@ -222,7 +224,7 @@ li {
   max-width: 100px;
   background: linear-gradient(-35deg, transparent 49%, rgba(233, 252, 255, 0.5) 50%, transparent 51%);
 	background-size: 400% 400%;
-  animation: gloss-shine 4s ease-in-out infinite;
+  animation: gloss-shine 4s ease-in-out 1s infinite;
 }
 
 /* ------------------- */
