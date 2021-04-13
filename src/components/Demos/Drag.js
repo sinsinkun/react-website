@@ -55,6 +55,9 @@ function DragDemo() {
         used to calculate the position of the square, relative to its container. The square is also 
         configured to snap to the grid.
       </p>
+      <p>
+        This demo does not work with touchscreens yet, please use a PC to try out this demo.
+      </p>
       <div className="drag-grid">
         <div className="drag-piece" style={{transform:`translate(${coords.x}px, ${coords.y}px)`}}
           onMouseDown={(e) => { initClient={x:e.clientX, y:e.clientY}; initCoord=coords; setDrag(true); }}>
