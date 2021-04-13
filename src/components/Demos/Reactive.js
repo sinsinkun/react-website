@@ -9,6 +9,7 @@ function ReactiveDemo () {
 
   const [store] = useStoreContext();
   const [width, setWidth] = useState(store.winX/1.5);
+  const [gridCol, setGridCol] = useState("1fr 1fr 1fr 1fr");
   const handle = useRef(null);
   const [drag, setDrag] = useState(false);
 
@@ -16,6 +17,12 @@ function ReactiveDemo () {
     if (store.winX > 980 ) setWidth(store.winX/1.5);
     else setWidth(store.winX/1.2);
   }, [store.winX])
+
+  useEffect(() => {
+    if (width > 600) setGridCol("1fr 1fr 1fr 1fr");
+    else if (width > 400) setGridCol("1fr 1fr");
+    else setGridCol("1fr");
+  }, [width])
 
   useEffect(() => {
     // if drag changed to true, add event listeners
@@ -55,6 +62,13 @@ function ReactiveDemo () {
           viewing this page on a PC). The squares below will adjust their positioning and size
           based on the size of the container. This demo is best viewed on a PC.
         </p>
+        <br/>
+        <div className="demo-row" style={{gridTemplateColumns:gridCol}}>
+          <div className="demo-sqr"></div>
+          <div className="demo-sqr"></div>
+          <div className="demo-sqr"></div>
+          <div className="demo-sqr"></div>
+        </div>
       </div>
       <div className="demo-handle" ref={handle} 
         onMouseDown={(e)=>{ initMouseX=e.clientX; initWidth=width; setDrag(true) }}>

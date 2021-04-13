@@ -26,7 +26,6 @@
 }
 
 /* -- Reactive CSS -- */
-
 .demo-exp {
   margin-right: 10px;
   min-width: 250px;
@@ -50,4 +49,17 @@
 
 .demo-handle:hover {
   background-color: rgb(140, 142, 158);
+}
+
+.demo-row {
+  width: 100%;
+  display: grid;
+}
+
+.demo-sqr {
+  min-height: 50px;
+  min-width: 50px;
+  aspect-ratio: 1;
+  background-color: teal;
+  margin: 0.5rem;
 }
