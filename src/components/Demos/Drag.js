@@ -14,13 +14,16 @@ function DragDemo() {
     // if drag changed to true, add event listeners
     if (drag) {
       window.addEventListener('mousemove', trackMouse);
+      window.addEventListener('touchmove', trackTouch);
       window.addEventListener('mouseup', removeTrack);
+      window.addEventListener('touchend', removeTrack);
     }
     // if drag changed to false, remove event listeners
     else {
-      
       window.removeEventListener('mousemove', trackMouse);
+      window.removeEventListener('touchmove', trackTouch);
       window.removeEventListener('mouseup', removeTrack);
+      window.removeEventListener('touchend', removeTrack);
     }
     // eslint-disable-next-line
   }, [drag])
@@ -29,21 +32,32 @@ function DragDemo() {
   const trackMouse = useCallback((e) => { 
     let newCoordX = initCoord.x + e.clientX - initClient.x;
     let newCoordY = initCoord.y + e.clientY - initClient.y;
-    // restrict x
-    if (newCoordX<0) newCoordX=0;
-    else if (newCoordX>250) newCoordX=250;
-    // restrict y
-    if (newCoordY<0) newCoordY=0;
-    if (newCoordY>250) newCoordY=250;
-    // update target location
-    finalCoord.x = Math.round(newCoordX /25)*25;
-    finalCoord.y = Math.round(newCoordY /25)*25;
-    setCoords({x:newCoordX, y:newCoordY}); 
+    moveBoxTo(newCoordX, newCoordY);
   }, []);
+
+  const trackTouch = useCallback((e) => {
+    let newCoordX = initCoord.x + e.touches[0].clientX - initClient.x;
+    let newCoordY = initCoord.y + e.touches[0].clientY - initClient.y;
+    moveBoxTo(newCoordX, newCoordY);
+  }, [])
+
+  function moveBoxTo(x,y) {
+    // restrict x
+    if (x < 0) x = 0;
+    else if (x > 250) x = 250;
+    // restrict y
+    if (y < 0) y=0;
+    if (y > 250) y=250;
+    // update target location
+    finalCoord.x = Math.round(x /25)*25;
+    finalCoord.y = Math.round(y /25)*25;
+    setCoords({x:x, y:y}); 
+  }
+
   const removeTrack = useCallback(() => { 
     // snap square to grid
     setCoords({x:finalCoord.x, y:finalCoord.y});
-    setDrag(false) 
+    setDrag(false);
   }, []);
 
   return(
@@ -55,12 +69,10 @@ function DragDemo() {
         used to calculate the position of the square, relative to its container. The square is also 
         configured to snap to the grid.
       </p>
-      <p>
-        This demo does not work with touchscreens yet, please use a PC to try out this demo.
-      </p>
       <div className="drag-grid">
         <div className="drag-piece" style={{transform:`translate(${coords.x}px, ${coords.y}px)`}}
-          onMouseDown={(e) => { initClient={x:e.clientX, y:e.clientY}; initCoord=coords; setDrag(true); }}>
+          onMouseDown={(e) => { initClient={x:e.clientX, y:e.clientY}; initCoord=coords; setDrag(true); }}
+          onTouchStart={(e) => { initClient={x:e.touches[0].clientX, y:e.touches[0].clientY}; initCoord=coords; setDrag(true); }}>
         </div>
       </div>
     </div>

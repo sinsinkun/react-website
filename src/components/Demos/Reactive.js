@@ -28,12 +28,16 @@ function ReactiveDemo () {
     // if drag changed to true, add event listeners
     if (drag) {
       window.addEventListener('mousemove', trackMouse);
+      window.addEventListener('touchmove', trackTouch);
       window.addEventListener('mouseup', removeTrack);
+      window.addEventListener('touchend', removeTrack);
     }
     // if drag changed to false, remove event listeners
     else {
       window.removeEventListener('mousemove', trackMouse);
+      window.removeEventListener('touchmove', trackTouch);
       window.removeEventListener('mouseup', removeTrack);
+      window.removeEventListener('touchend', removeTrack);
     }
     // eslint-disable-next-line
   }, [drag])
@@ -44,6 +48,13 @@ function ReactiveDemo () {
     // min width 250px
     if (initWidth + deltaX > 250) setWidth(initWidth + deltaX); 
   }, []);
+
+  const trackTouch = useCallback((e) => {
+    let deltaX = e.touches[0].clientX - initMouseX;
+    // min width 250px
+    if (initWidth + deltaX > 250) setWidth(initWidth + deltaX); 
+  }, [])
+
   const removeTrack = useCallback(() => { setDrag(false) }, []);
 
   return(
@@ -70,7 +81,8 @@ function ReactiveDemo () {
         </div>
       </div>
       <div className="demo-handle" ref={handle} 
-        onMouseDown={(e)=>{ initMouseX=e.clientX; initWidth=width; setDrag(true) }}>
+        onMouseDown={(e)=>{ initMouseX=e.clientX; initWidth=width; setDrag(true) }}
+        onTouchStart={(e)=>{ initMouseX=e.touches[0].clientX; initWidth=width; setDrag(true) }}>
         .<br/>.<br/>.
       </div>
     </div>
