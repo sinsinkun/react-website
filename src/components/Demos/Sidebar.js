@@ -35,7 +35,7 @@ function Sidebar() {
       {/* <input className="sidebar-search" placeholder="Search" /> */}
       <ul className="sidebar-btn-list">
         <li><button onClick={() => goToDemo("popout")}>Popout tabs</button></li>
-        <li><button onClick={() => goToDemo("reactive")}>Responsive layouts</button></li>
+        <li><button onClick={() => goToDemo("responsive")}>Responsive layouts</button></li>
         <li><button onClick={() => goToDemo("dragdrop")}>Drag and drop</button></li>
       </ul>
     </div>
@@ -50,7 +50,7 @@ function Sidebar() {
       {/* <input className="sidebar-search" placeholder="Search" /> */}
       <ul className="sidebar-btn-list">
         <li><button onClick={() => goToDemo("popout")}>Popout tabs</button></li>
-        <li><button onClick={() => goToDemo("reactive")}>Reactive layouts</button></li>
+        <li><button onClick={() => goToDemo("responsive")}>Responsive layouts</button></li>
         <li><button onClick={() => goToDemo("dragdrop")}>Drag and drop</button></li>
       </ul>
     </div>

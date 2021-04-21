@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PopoutDemo from './Popout';
-import ReactiveDemo from './Reactive';
+import ResponsiveDemo from './Responsive';
 import DragDemo from './Drag';
 import './demos.css';
 import NoDemo from './NoDemo';
@@ -20,9 +20,9 @@ function MainDisplay() {
   function renderDemo() {
     if (demo === "none") return <NoDemo />;
     else if (demo === "popout") return <PopoutDemo />;
-    else if (demo === "reactive") return <ReactiveDemo />;
+    else if (demo === "responsive") return <ResponsiveDemo />;
     else if (demo === "dragdrop") return <DragDemo />;
-    else return <span>{demo} demo coming soon...</span>;
+    else return <span>{demo} demo does not exist.</span>;
   }
 
   return(
