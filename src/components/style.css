@@ -210,6 +210,7 @@ li {
   padding: 0.6rem 0;
   color: inherit;
   text-decoration: none;
+  transition: 0.5s ease-out;
 }
 
 .nav-side .navlinks:hover {
@@ -363,13 +364,13 @@ li {
 }
 
 @keyframes slide-from-right {
-  0% { transform: translateX(100%) }
-  100% { transform: translateX(0) }
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slide-to-right {
-  0% { transform: translateX(0) }
-  100% { transform: translateX(100%) }
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
 }
 
 @keyframes gloss-shine {
